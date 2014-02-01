@@ -30,7 +30,7 @@ body {
 
 <p>That's all we need to get the counter going. Now let's print it at the beginning of every chapter heading. We'll identify the heading elements, then use the <code>:before</code>&nbsp;pseudoclass to add the chapter number, and then just for kicks we'll split the chapter number and chapter title across two lines.</p>
 
-<pre data-original-title="" data-type="programlisting" title="" class="breakdownsource">
+<pre class="breakdownsource" data-original-title="" data-type="programlisting" title="">
 section[data-type=&quot;chapter&quot;] &gt; h1:before {
 &nbsp; content: &quot;Chapter &quot; counter(chapternumber);
 &nbsp; display: block;
@@ -41,13 +41,23 @@ section[data-type=&quot;chapter&quot;] &gt; h1:before {
 <section data-type="sect2">
 <h2>Code Breakdown</h2>
 
+<p>section[data-type=&quot;chapter&quot;] &gt; h1:before {</p>
+
 <p>All our chapter headings are tagged as h1 level headings, and are direct children of the parent section. Additionally, we know that we won't have any other h1 direct children, so this is all we need to target the chapter headings.</p>
+
+<p>content: &quot;Chapter &quot; counter(chapternumber);</p>
 
 <p>To print the counter, we use the content property. We want to add the text &quot;Chapter &quot; before the actual number; you can combine types of content within the content property, making sure to place text strings in quotes.</p>
 
+<p>display: block;</p>
+
 <p>In order to display the chapter number on it's own line (as opposed to inline with the chapter heading), we give the display property a value of block. This means that we want to treat this element as a block element, instead of an inline.</p>
 
+<p>margin-bottom: 0.12in;</p>
+
 <p>Add a little space below the chapter number, to make things look nice.</p>
+
+<p>}</p>
 </section>
 
 <p>Here's the output:</p>
