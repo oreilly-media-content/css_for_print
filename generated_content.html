@@ -47,6 +47,28 @@ h1 {
 
 <p>Before you can start using a counter, you need to initiate it using the <code>counter-reset</code> property. This property actually serves two purposes: it sets the counter to a starting position, and it resets the counter as needed. For example, if you want to number the figures within each chapter of a book, you could add a counter to each figure, resetting the counter to start at one with each new chapter. You can reset multiple counters within one <code>counter-reset</code> declaration, and you can also start the counter off at a specific number. For example, you can start your chapters off at 10, and then increment every chapter by 10 thereafter, using the <code>counter-increment</code> property.</p>
 
+<div data-type="warning">
+<h1>&nbsp;</h1>
+
+<p>counter-reset is subject to the cascade. This means that if you define two counter-reset properties within one element, only the second will take effect:</p>
+
+<p>body {</p>
+
+<p>&nbsp; counter-reset: chapternumber 10;</p>
+
+<p>&nbsp; counter-reset: sectionnumber;</p>
+
+<p>}</p>
+
+<p>Instead, reset both (or as many as you like) counters within the same counter-reset instance:</p>
+
+<p>body {</p>
+
+<p>&nbsp; counter-reset: chapternumber 10 senctionnumber;</p>
+
+<p>}</p>
+</div>
+
 <p><code>counter-increment</code> accepts two values: the id of the counter to increment, and a number by which to increment it. The id can be anything at all, and doesn't need to be defined anywhere else in the document (though it can be used multiple times, and will also need to be initiated in the <code>counter-reset</code> property at least once). You can also choose how you want the counter to increment; by default, the counter will increase in value by one at each occurrence, but you could increase by any number, or even count down by using a negative number. Choose what number to start the count off when you initiate the counter with the <code>counter-reset</code> property.</p>
 
 <p>The page counter is built into the CSS3 paged media spec, along with&nbsp;</p>
