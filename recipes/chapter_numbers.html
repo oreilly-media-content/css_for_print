@@ -43,9 +43,11 @@ section[data-type=&quot;chapter&quot;] &gt; h1:before {
 
 <pre data-type="programlisting">
 section[data-type=&quot;chapter&quot;] &gt; h1:before {
+
+<span class="comment">/*All our chapter headings are tagged as h1 level headings, and are direct children of the parent section. Additionally, we know that we won't have any other h1 direct children, so this is all we need to target the chapter headings.*/</span>
 </pre>
 
-<p>All our chapter headings are tagged as h1 level headings, and are direct children of the parent section. Additionally, we know that we won't have any other h1 direct children, so this is all we need to target the chapter headings.</p>
+<p></p>
 
 <pre data-original-title="" data-type="programlisting" title="">
 content: &quot;Chapter &quot; counter(chapternumber);
