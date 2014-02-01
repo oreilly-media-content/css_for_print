@@ -3,15 +3,15 @@
 
 <p>A standard design practice is to indent all plain text paragraphs except for those that immediately follow a heading. We can use pseudoclasses to achieve this.</p>
 
-<p>p {</p>
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
+p {
+&nbsp; text-indent: 20pt;
+}
 
-<p>&nbsp; text-indent: 20pt;</p>
+h1 &gt; p:first-of-type {
+&nbsp; text-indent: 0;
+}
+</pre>
 
-<p>}</p>
-
-<p>h1 &gt; p:first-of-type {</p>
-
-<p>&nbsp; text-indent: 0;</p>
-
-<p>}</p>
+<p>Some text.</p>
 </section>
