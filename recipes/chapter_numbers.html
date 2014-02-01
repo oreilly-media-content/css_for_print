@@ -8,7 +8,27 @@
 
 <p>In order to create our counter, we need to know how our chapters are tagged. As always, it's important to use consistent and clear semantics in the HTML, so that you can write targeted and scalable CSS. In our document, we use a section tag to wrap our chapters, and since we use sections in other places as well, we've added a custom data-type attribute of &quot;chapter&quot; to those sections so there's no confusion.&nbsp;</p>
 
-<p>section[data-type=&quot;chapter&quot;]</p>
+<p>Now we apply the counter-increment property to every occurrence of our chapter-level sections. We'll create a counter with the name &quot;chapternumber&quot;, because clarity is for winners.</p>
+
+<p>section[data-type=&quot;chapter&quot;] {</p>
+
+<p>&nbsp; counter-increment: chapternumber;</p>
+
+<p>}</p>
+
+<p>Now every occurrence of a section with a data-type of &quot;chapter&quot; will increment the chapternumber counter by one.&nbsp;</p>
+
+<p>However, before the counter can start incrementing, we need to initiate it by using the counter-reset property somewhere at the beginning of our document. Let's apply it to the main parent element:</p>
+
+<p>body {</p>
+
+<p>&nbsp; counter-reset: chapternumber;</p>
+
+<p>}</p>
+
+<p>As we learned from TK,&nbsp;</p>
+
+<p>&nbsp;</p>
 </section>
 
 <p>&nbsp;</p>
