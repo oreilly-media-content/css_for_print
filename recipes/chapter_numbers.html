@@ -30,7 +30,7 @@ body {
 
 <p>That's all we need to get the counter going. Now let's print it at the beginning of every chapter heading. We'll identify the heading elements, then use the <code>:before</code>&nbsp;pseudoclass to add the chapter number, and then just for kicks we'll split the chapter number and chapter title across two lines.</p>
 
-<pre data-original-title="" data-type="programlisting" title="">
+<pre data-original-title="" data-type="programlisting" title="" class="breakdown">
 section[data-type=&quot;chapter&quot;] &gt; h1:before {
 &nbsp; content: &quot;Chapter &quot; counter(chapternumber);
 &nbsp; display: block;
