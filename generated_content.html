@@ -48,7 +48,7 @@ h1 {
 <p>Before you can start using a counter, you need to initiate it using the <code>counter-reset</code> property. This property actually serves two purposes: it sets the counter to a starting position, and it resets the counter as needed. For example, if you want to number the figures within each chapter of a book, you could add a counter to each figure, resetting the counter to start at one with each new chapter. You can reset multiple counters within one <code>counter-reset</code> declaration, and you can also start the counter off at a specific number. For example, you can start your chapters off at 10, and then increment every chapter by 10 thereafter, using the <code>counter-increment</code> property.</p>
 
 <div data-type="warning">
-<p><code>counter-reset</code> is subject to the cascade. This means that if you define two <code>counter-reset</code> properties within one element, only the second will take effect (because it is overriding the first declaration):</p>
+<p><code>counter-reset</code> is subject to the cascade. This means that if you define two <code>counter-reset</code> properties within one element, only the second will take effect (as with all things cascade, the second declaration overrides the first, as if it had never existed at all):</p>
 
 <pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 body {
