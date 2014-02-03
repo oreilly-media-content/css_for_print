@@ -1,0 +1,39 @@
+{
+  "files": [
+    "preface.html",
+    "introduction_to_print.html",
+    "print_vs_web.html",
+    "basic_print_layout.html",
+    "printing_a_webpage.html",
+    "css_typography.html",
+    "paged_media_module.html",
+    "generated_content.html",
+    "professional_css.html",
+    "recipes/indent_all_but_first.html",
+    "recipes/chapter_numbers.html",
+    "recipes/generated_toc.html"
+  ],
+  "formats": {
+    "pdf": {
+      "version": "web",
+      "index": false,
+      "toc": false
+    },
+    "epub": {
+      "index": false,
+      "toc": false,
+      "epubcheck": false
+    },
+    "mobi": {
+      "index": false,
+      "toc": false
+    },
+    "html": {
+      "index": false,
+      "toc": false,
+      "consolidated": false
+    }
+  },
+  "theme": "oreillymedia/animal_theme",
+  "title": "css for print"
+}
