@@ -52,6 +52,8 @@ h1 {
 <p>You also need to consider the flow of the actual source HTML, and the framework behind the page. In most cases, you don't want to rework the content markup for the print output--instead, you want to write CSS on top of that markup. For example, in the source flow, if the navigation menu is located before the main content, you don't want to cut-and-paste the code block for that nav menu to move it to a different spot; instead, you need to find a way to negotiate both leaving the source alone and getting it to look good in print.</p>
 
 <p>Many frameworks and websites these days use the concept of a <em>grid</em> to set up the page. The grid is a well-established tool in the field of graphic design, with a slight twist when it comes to CSS. A grid in web design generally consists of a fixed number of blocks the stretch the allowed content area. Sometimes the content area is the entire screen width (however much that may be, since screens come in all shapes and sizes), and sometimes the content area is set to a fixed width that changes based on common screen sizes (for example, the allowed content area may be 900px for a PC, and then switch to 100% width for a smartphone). Additionally, the grid divisions may be set to fixed sizes (for example, each grid column is 60px with a 20px margin), or may be set to a percentage of the content area (each grid column is 10% of the content area, again with a 20px margin).</p>
+
+<p>If your web page uses a reflowable grid based on floats, then you may be able to leverage that CSS when optimizing for print.&nbsp;</p>
 </section>
 
 <p>&nbsp;</p>
