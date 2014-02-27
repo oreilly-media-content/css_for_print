@@ -4,31 +4,6 @@
 <p>The paged media module was introduced along with CSS3, and takes print formatting with CSS to the next level. It's exactly what it sounds like: new properties a rules targeted specifically at content that is going to be rendered into distinct pages. The paged media module redefines the CSS box model to apply specifically to the printed page, and gives designers control over things like page size, header and footer content, and more.</p>
 
 <section data-type="sect1">
-<h1>@page</h1>
-
-<p>The crux of paged media is the <code>@page</code> rule. <code>@page</code> allows you to define layout at the page level. When the content is rendered into pages, the properties you define with the <code>@page</code> rule will apply to every page (or subset of pages, as defined by you) of your document.&nbsp;<span style="line-height: 1.5em;">If you've ever used page layout programs like InDesign or FrameMaker, then you can think of @page rules as master pages: templates that consistently define the broad structure of every page in the document.</span></p>
-
-<p><span style="line-height: 1.5em;">Here's a basic @page definition:</span></p>
-
-<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
-@page {
-  size: 6in 9in;
-&nbsp; margin: 0.5in;
-}
-</pre>
-
-<p>This simple definition says that every single page in your document will be six inches wide by nine inches tall, with a half inch margin on all sides--thus, the content area would be 5in x 8in. The rendered page might look like this:</p>
-
-<p>INSERT FIGURE: rendered page</p>
-
-<p>This rule would apply to all pages, but you can also limit your <code>@page</code> rules to apply only to a subset of the pages of your document, using a couple of different methods.</p>
-
-<p>First, there are a few pseudo classes built into the paged media spec that apply directly to <code>@page</code>.&nbsp;</p>
-
-<p>The other way to create more specified @page rules is by using page selectors.</p>
-</section>
-
-<section data-type="sect1">
 <h1>The Box and Page Models</h1>
 
 <p>The box model in CSS defines various content areas around block elements (like divs, ps, and so on): the margin area is the space between the element and it's neighbors; the border area is a reserved space for adding a border around the element; the padding area adds space between the border and the actual content of the element; and the content area is where the actual content of the element goes.</p>
@@ -61,6 +36,31 @@
 <p>INSERT FIGURE: what the above code would render as</p>
 
 <p>This gives you a lot of control over laying out page elements like folios (this is the fancy term for page numbers), running headers and footers, and any other items you want on the page, outside the main book content. You can also add dynamic text using strings and counters, as discussed in TKXREF.</p>
+</section>
+
+<section data-type="sect1">
+<h1>@page</h1>
+
+<p>The crux of paged media is the <code>@page</code> rule. <code>@page</code> allows you to define layout at the page level. When the content is rendered into pages, the properties you define with the <code>@page</code> rule will apply to every page (or subset of pages, as defined by you) of your document.&nbsp;<span style="line-height: 1.5em;">If you've ever used page layout programs like InDesign or FrameMaker, then you can think of @page rules as master pages: templates that consistently define the broad structure of every page in the document.</span></p>
+
+<p><span style="line-height: 1.5em;">Here's a basic @page definition:</span></p>
+
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
+@page {
+  size: 6in 9in;
+&nbsp; margin: 0.5in;
+}
+</pre>
+
+<p>This simple definition says that every single page in your document will be six inches wide by nine inches tall, with a half inch margin on all sides--thus, the content area would be 5in x 8in. The rendered page might look like this:</p>
+
+<p>INSERT FIGURE: rendered page</p>
+
+<p>This rule would apply to all pages, but you can also limit your <code>@page</code> rules to apply only to a subset of the pages of your document, using a couple of different methods.</p>
+
+<p>First, there are a few pseudo classes built into the paged media spec that apply directly to <code>@page</code>.&nbsp;</p>
+
+<p>The other way to create more specified @page rules is by using page selectors.</p>
 </section>
 
 <p>&nbsp;</p>
