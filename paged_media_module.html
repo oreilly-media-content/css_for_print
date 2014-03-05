@@ -94,41 +94,28 @@ section.chapter {
 
 <p>You can also combine page selectors with pseudo classes to get really specific. For example, say you want page numbers to appear only in your section.chapter elements. Even more specifically, you want a page number to appear at bottom left on left-hand pages, at bottom right on right-hand pages, and not at all on the first page. This is easily accomplished using our page selector and the :first, :left, and :right pseudo classes:</p>
 
-<p>@page chapter:left {</p>
+<pre data-original-title="" data-type="programlisting" title="">
+@page chapter:left {
+&nbsp; @bottom-left {
+&nbsp; &nbsp; content: counter(page);
+&nbsp; }
+}
 
-<p>&nbsp; @bottom-left {</p>
+@page chapter:right {
+&nbsp; @bottom-right {
+&nbsp; &nbsp; content: counter(page);
+&nbsp; }
+}
 
-<p>&nbsp; &nbsp; content: counter(page);</p>
-
-<p>&nbsp; }</p>
-
-<p>}</p>
-
-<p>@page chapter:right {</p>
-
-<p>&nbsp; @bottom-right {</p>
-
-<p>&nbsp; &nbsp; content: counter(page);</p>
-
-<p>&nbsp; }</p>
-
-<p>}</p>
-
-<p>@page chapter:first {</p>
-
-<p>&nbsp; @bottom-right {</p>
-
-<p>&nbsp; &nbsp; content: normal;</p>
-
-<p>&nbsp; }</p>
-
-<p>&nbsp; @bottom-left {</p>
-
-<p>&nbsp; &nbsp; content: normal;</p>
-
-<p>&nbsp; }</p>
-
-<p>}</p>
+@page chapter:first {
+&nbsp; @bottom-right {
+&nbsp; &nbsp; content: normal;
+&nbsp; }
+&nbsp; @bottom-left {
+&nbsp; &nbsp; content: normal;
+&nbsp; }
+}
+</pre>
 
 <p>text</p>
 </section>
