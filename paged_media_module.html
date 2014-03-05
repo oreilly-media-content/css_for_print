@@ -73,6 +73,16 @@ section.chapter {
 </pre>
 
 <p>In the above example, I've created a page selector called &quot;chapter&quot;--you can name your page selectors whatever you want, though it's generally best to pick a name that is clear and descriptive, and easy to remember. My new &quot;chapter&quot; page selector is applied to sections that have a class of <code>.chapter</code>. (You'll notice that I used the same word--chapter--as both my class name and my page selector; even though I used the same word, they aren't related except coincidentally.)</p>
+
+<p>You then combine your new page selector with the @page rule, like this:</p>
+
+<p>@page chapter {</p>
+
+<p>&nbsp; background-color: cmyk(0%,0%,0%,30%);</p>
+
+<p>}</p>
+
+<p>In the above example, pages containing elements that use the chapter page selector will have a light gray background color.</p>
 </section>
 
 <p>text</p>
