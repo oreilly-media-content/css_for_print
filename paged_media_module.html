@@ -72,7 +72,7 @@ section.chapter {
 }
 </pre>
 
-<p>In the above example, I've created a page selector called &quot;chapter&quot;--you can name your page selectors whatever you want, though it's generally best to pick a name that is clear and descriptive, and easy to remember. My new &quot;chapter&quot; page selector is applied to sections that have a class of <code>.chapter</code>. (You'll notice that I used the same word--chapter--as both my class name and my page selector; even though I used the same word, they aren't related except coincidentally.)</p>
+<p>In the above example, I've created a page selector called &quot;chapter&quot;--you can name your page selectors whatever you want, though it's generally best to pick a name that is clear and descriptive, and easy to remember. My new &quot;chapter&quot; page selector is applied to sections that have a class of <code>.chapter</code>. (You'll notice that I used the same word--chapter--as both my class name and my page selector; even though I used the same word, they aren't related.)</p>
 
 <p>You then combine your new page selector with the @page rule, like this:</p>
 
@@ -89,7 +89,7 @@ section.chapter {
 
 <p>In general, applying a new page rule to an element will force that element to start on a new page. For example, if your <code>section.chapter</code> follows a <code>section.preface</code>, you won't get half a gray page. Instead, the <code>section.chapter</code> will start on a new, all-gray page.</p>
 
-<p>INSERT FIGURE: what will&nbsp;</p>
+<p>INSERT FIGURE: what will&nbsp; vs. what won't</p>
 </div>
 
 <p>You can also combine page selectors with pseudo classes to get really specific. For example, say you want page numbers to appear only in your section.chapter elements. Even more specifically, you want a page number to appear at bottom left on left-hand pages, at bottom right on right-hand pages, and not at all on the first page. This is easily accomplished using our page selector and the :first, :left, and :right pseudo classes:</p>
@@ -117,7 +117,12 @@ section.chapter {
 }
 </pre>
 
-<p>Let's take a minute to dissect this code.</p>
+<p>Let's take a minute to dissect this code. We've got three instances of the <code>@page</code> rule, and all three of these instances apply only to HTML elements that use the <code>page: chapter</code> CSS property. The first instance of the @page rule applies only to lefthand pages of this subset of elements; when the content box of an element using page: chapter flows onto a lefthand page, then that page will display the current page number in the bottom left margin area. Similarly, right hand pages in this same set of HTML elements will display the current page number in the bottom right margin area. We don't want any page numbers to appear on the first page of content for this HTML element--whether it be a left hand or right hand page--so we've set the content of both the bottom left and bottom right margin areas to "normal" for these pages.</p>
+
+<div data-type="note">
+<h1>Note</h1>
+<p>We can force content to always start on either a left or right hand page, as well, in which case we'd only need to override one of those margin areas; more on that in TKTK.</p>
+</div>
 </section>
 
 <p>text</p>
