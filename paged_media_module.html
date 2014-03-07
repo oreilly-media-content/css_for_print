@@ -62,6 +62,36 @@
 
 <p>For example, many books have different-sized margins for the outside and inside edges of the page. You can't define a single margin property for all pages in one swoop--instead, you'd use pseudo classes to create this effect.</p>
 
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
+@page {
+
+&nbsp; border-bottom: 1pt solid cmyk(0%,0%,0%,100%);
+
+&nbsp; padding: 0.12in;
+
+&nbsp; margin-top: 0.5in;
+
+&nbsp; margin-bottom: 0.75in;
+
+}
+
+@page :left {
+
+&nbsp; margin-right: 0.5in;
+
+&nbsp; margin-left: 1in;
+
+}
+
+@page :right {
+
+&nbsp; margin-right: 1in;
+
+&nbsp; margin-left: 0.5in;
+
+}
+</pre>
+
 <p>The other way to create more specified <code>@page</code> rules is by using page selectors.</p>
 
 <p>A page selector creates a user-defined subset of pages to apply styles to. They work a lot like the pseudo classes, except that you get to decide what pages your styles apply to, based on the HTML elements in your document. For example, you could apply custom page styling to all <code>&lt;section&gt;</code> elements, or you could limit that styling only to the <code>&lt;section&gt;</code> elements with a class of <code>.chapter</code>.</p>
