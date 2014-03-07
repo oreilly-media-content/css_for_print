@@ -101,9 +101,11 @@ div.note {
 
 <p>This CSS, of course, will also apply to any other div elements that have a class of note.&nbsp;</p>
 
-<p>Avoid vs. Never</p>
+<aside data-type="sidebar">
+<h5>Avoid vs. Never</h5>
 
-<p>You may wonder why one of the allowed values is always, but there is no never--instead, there's just avoid. But it makes sense if you think about it. What if your HTML element content was longer than just one page, and yet you'd applied page-break-inside: never? Presumably, the rest of your document would break across infinite blank pages as it searched for a page on which the long element would fit. Instead, by limiting the value to avoid, the rendering engine will do its best not to break the element across pages, but if it runs into a situation like the above where a break is unavoidable, it'll go ahead and split your element, rather than create an infinite loop.</p>
+<p><span style="line-height: 1.5em;">You may wonder why one of the allowed values is always, but there is no never--instead, there's just avoid. But it makes sense if you think about it. What if your HTML element content was longer than just one page, and yet you'd applied page-break-inside: never? Presumably, the rest of your document would break across infinite blank pages as it searched for a page on which the long element would fit. Instead, by limiting the value to avoid, the rendering engine will do its best not to break the element across pages, but if it runs into a situation like the above where a break is unavoidable, it'll go ahead and split your element, rather than create an infinite loop.</span></p>
+</aside>
 
 <p>text</p>
 </section>
