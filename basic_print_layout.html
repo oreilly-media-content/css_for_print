@@ -64,7 +64,7 @@ section.chapter {
   page-break-before: right;
   page-break-after: always;
 }
-		</pre>
+</pre>
 
 <p>Here's what will happen in our two-neighboring-section.chapter scenario: the first section.chapter still ends on a right-hand page. However, because we added a page-break-after requirement, the next section won't start immediately, but will be pushed two pages later--it's pushed to the next page because of page-break-after, and because of our page-break-before: right requirement, it's pushed one more page back so that it starts on a right-hand page. We thus have the last page of the first section.chapter on a right-hand page, then a blank left-hand page, then the first page of the next section.chapter on a fresh right-hand page.</p>
 
