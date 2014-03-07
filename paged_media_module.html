@@ -60,6 +60,8 @@
 
 <p>First, there are a few pseudo classes built into the paged media spec that apply directly to <code>@page</code>. These pseudo classes limit the scope of the page rule to a predefined subset of pages: first, left, and right. As you'd expect, <code>:first</code> limits a definition only to the first page of a rule; and if you imagine that the bound book is lying open in front of you, the <code>:left</code> pseudo class applies only to left hand pages, and conversely <code>:right</code> applies to the right hand pages.</p>
 
+<p>For example, many books have different-sized margins for the outside and inside edges of the page.&nbsp;</p>
+
 <p>The other way to create more specified <code>@page</code> rules is by using page selectors.</p>
 
 <p>A page selector creates a user-defined subset of pages to apply styles to. They work a lot like the pseudo classes, except that you get to decide what pages your styles apply to, based on the HTML elements in your document. For example, you could apply custom page styling to all <code>&lt;section&gt;</code> elements, or you could limit that styling only to the <code>&lt;section&gt;</code> elements with a class of <code>.chapter</code>.</p>
@@ -117,10 +119,11 @@ section.chapter {
 }
 </pre>
 
-<p>Let's take a minute to dissect this code. We've got three instances of the <code>@page</code> rule, and all three of these instances apply only to HTML elements that use the <code>page: chapter</code> CSS property. The first instance of the @page rule applies only to lefthand pages of this subset of elements; when the content box of an element using page: chapter flows onto a lefthand page, then that page will display the current page number in the bottom left margin area. Similarly, right hand pages in this same set of HTML elements will display the current page number in the bottom right margin area. We don't want any page numbers to appear on the first page of content for this HTML element--whether it be a left hand or right hand page--so we've set the content of both the bottom left and bottom right margin areas to "normal" for these pages.</p>
+<p>Let's take a minute to dissect this code. We've got three instances of the <code>@page</code> rule, and all three of these instances apply only to HTML elements that use the <code>page: chapter</code> CSS property. The first instance of the @page rule applies only to lefthand pages of this subset of elements; when the content box of an element using page: chapter flows onto a lefthand page, then that page will display the current page number in the bottom left margin area. Similarly, right hand pages in this same set of HTML elements will display the current page number in the bottom right margin area. We don't want any page numbers to appear on the first page of content for this HTML element--whether it be a left hand or right hand page--so we've set the content of both the bottom left and bottom right margin areas to &quot;normal&quot; for these pages.</p>
 
 <div data-type="note">
 <h1>Note</h1>
+
 <p>We can force content to always start on either a left or right hand page, as well, in which case we'd only need to override one of those margin areas; more on that in TKTK.</p>
 </div>
 </section>
