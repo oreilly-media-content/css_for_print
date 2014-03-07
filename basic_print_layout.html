@@ -10,9 +10,9 @@
 	<li>box sizes (later, @page)</li>
 	<li>positioning</li>
 	<li>floats
-		<ul>
-			<li>http://alistapart.com/article/goingtoprint/</li>
-		</ul>
+	<ul>
+		<li>http://alistapart.com/article/goingtoprint/</li>
+	</ul>
 	</li>
 	<li>pagebreaks</li>
 	<li>images</li>
@@ -32,56 +32,56 @@
 <p>These are all properties you use for web layout, but they can have different uses when it comes to print.</p>
 
 <section data-type="sect1">
-	<h1>Page Breaks</h1>
+<h1>Page Breaks</h1>
 
-	<p>When dealing with scrolling content, you don't have to worry too much about how your content is being chunked--it's all just one even, unbroken block. However, when it comes to paged media, every page is a discrete canvas; this means that when you run out of space for your content on one page, the content will break over to a new page. Fortunately you've got some control over how and where these page breaks occur.</p>
+<p>When dealing with scrolling content, you don't have to worry too much about how your content is being chunked--it's all just one even, unbroken block. However, when it comes to paged media, every page is a discrete canvas; this means that when you run out of space for your content on one page, the content will break over to a new page. Fortunately you've got some control over how and where these page breaks occur.</p>
 
-	<section data-type="sect2">
-		<h2>Universal Page Breaks (<code>always</code>, <code>avoid</code>)</h2>
+<section data-type="sect2">
+<h2>Universal Page Breaks (<code>always</code>, <code>avoid</code>)</h2>
 
-		<p>text</p>
-	</section>
+<p>text</p>
+</section>
 
-	<section data-type="sect2">
-		<h2>Relative Page Breaks (<code>right</code>, <code>left</code>) TKTKTK CHECK THIS</h2>
+<section data-type="sect2">
+<h2>Relative Page Breaks (<code>right</code>, <code>left</code>) TKTKTK CHECK THIS</h2>
 
-		<p>You can also force a section to start on a particular page--left or right. For example, many professional publishers prefer that all new chapters start on a right-hand page.</p>
+<p>You can also force a section to start on a particular page--left or right. For example, many professional publishers prefer that all new chapters start on a right-hand page.</p>
 
-		<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 section.chapter {
   page-break-before: right;
 }
-		</pre>
+</pre>
 
-		<p>This code says that for every section with a class of chapter, add a pagebreak before that section to ensure that it starts on a right-hand page. It's that simple. Other available values for this property are TKTK.</p>
+<p>This code says that for every section with a class of chapter, add a pagebreak before that section to ensure that it starts on a right-hand page. It's that simple. Other available values for this property are TKTK.</p>
 
-		<p>Of course, in this scenario you could run into trouble if you have two section.chapter HTML elements as siblings, and the first section.chapter ends on a right-hand page. Technically this meets our defined requirements: the next section.chapter is indeed starting on a right-hand page, so no new pagebreak is needed. However, this isn't the desired behavior--we actually want every section.chapter to start on a <em>new</em> right-hand page. We can fix this by combining a couple of page-break rules:</p>
+<p>Of course, in this scenario you could run into trouble if you have two section.chapter HTML elements as siblings, and the first section.chapter ends on a right-hand page. Technically this meets our defined requirements: the next section.chapter is indeed starting on a right-hand page, so no new pagebreak is needed. However, this isn't the desired behavior--we actually want every section.chapter to start on a <em>new</em> right-hand page. We can fix this by combining a couple of page-break rules:</p>
 
-		<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 section.chapter {
   page-break-before: right;
   page-break-after: always;
 }
 		</pre>
 
-		<p>Here's what will happen in our two-neighboring-section.chapter scenario: the first section.chapter still ends on a right-hand page. However, because we added a page-break-after requirement, the next section won't start immediately, but will be pushed two pages later--it's pushed to the next page because of page-break-after, and because of our page-break-before: right requirement, it's pushed one more page back so that it starts on a right-hand page. We thus have the last page of the first section.chapter on a right-hand page, then a blank left-hand page, then the first page of the next section.chapter on a fresh right-hand page.</p>
+<p>Here's what will happen in our two-neighboring-section.chapter scenario: the first section.chapter still ends on a right-hand page. However, because we added a page-break-after requirement, the next section won't start immediately, but will be pushed two pages later--it's pushed to the next page because of page-break-after, and because of our page-break-before: right requirement, it's pushed one more page back so that it starts on a right-hand page. We thus have the last page of the first section.chapter on a right-hand page, then a blank left-hand page, then the first page of the next section.chapter on a fresh right-hand page.</p>
 
-		<div data-type="note">
-		<h1>Note</h1>
-			<p>Learn how to style blank pages later in TKTK.</p>
-		</div>
+<div data-type="note">
+<h1>Note</h1>
 
-	</section>
+<p>Learn how to style blank pages later in TKTK.</p>
+</div>
+</section>
 
-	<section data-type="sect2">
-		<h2>At-Will Page Breaks</h2>
+<section data-type="sect2">
+<h2>At-Will Page Breaks</h2>
 
-		<p>Adding more targeted pagebreaks is a little trickier, and will most likely entail making some additions to your source markup.</p>
+<p>Adding more targeted pagebreaks is a little trickier, and will most likely entail making some additions to your source markup.</p>
 
-		<p>If your source is extremely stable or highly-structured, you can add pagebreaks using the cascade, in the same way you'd add any CSS styles.</p>
+<p>If your source is extremely stable or highly-structured, you can add pagebreaks using the cascade, in the same way you'd add any CSS styles.</p>
 
-		<p>However, if your DOM is likely to change, your better bet is to add a custom class to your HTML in the places you want to add a pagebreak.</p>
-	</section>
+<p>However, if your DOM is likely to change, your better bet is to add a custom class to your HTML in the places you want to add a pagebreak.</p>
+</section>
 </section>
 
 <p>&nbsp;</p>
