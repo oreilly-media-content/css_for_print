@@ -90,9 +90,16 @@ section.chapter {
 
 <p>If you have elements that you don't want to break across pages, you can use the <code>page-break-inside</code> property to restrict how and where the element can reflow. The main usefulness of <code>page-break-inside</code> is to restrict an element from breaking across pages, and so it only accepts four values:&nbsp;<code>auto</code>, <code>avoid</code>, <code>initial</code>, and <code>inherit</code> (<code>avoid</code> being the primary value for this property).</p>
 
-<p>For example, say you have a div element with a class of note, and containing a few lines of note text. You want all the text to stay together on the same page, so your CSS would look like this:</p>
+<p>For example, say you have a div element with a class of note, and containing a few lines of note text. You want all the text to stay together on the same page, so your CSS would look like this:<br />
+&nbsp;</p>
 
-<p>&nbsp;</p>
+<pre data-original-title="" data-type="programlisting" title="">
+div.note {
+&nbsp; page-break-inside: avoid;
+}
+</pre>
+
+<p>This CSS, of course, will also apply to any other div elements that have a class of note.&nbsp;</p>
 </section>
 
 <p>Text</p>
