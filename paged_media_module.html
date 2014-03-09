@@ -122,7 +122,7 @@ section.chapter {
 
 <p>You can also combine page selectors with pseudo classes to get really specific. For example, say you want page numbers to appear only in your <code>section.chapter</code> elements. Even more specifically, you want a page number to appear at bottom left on left-hand pages, at bottom right on right-hand pages, and not at all on the first page. This is easily accomplished using our page selector and the <code>:first</code>, <code>:left</code>, and <code>:right</code> pseudo classes.</p>
 
-<pre data-original-title="" data-type="programlisting" title="">
+<pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 @page chapter:left {
 &nbsp; @bottom-left {
 &nbsp; &nbsp; content: counter(page);
