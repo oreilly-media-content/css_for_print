@@ -86,11 +86,11 @@ section.chapter {
 
 <p>Once you have a counter created, you can dynamically insert the current counter value by referencing it in the <code>content</code> property of an HTML element.</p>
 
-<p>section.chapter &gt; h1:before {</p>
-
-<p>&nbsp; content: counter(chapternumber) &quot;: &quot;;</p>
-
-<p>}</p>
+<pre data-original-title="" data-type="programlisting" title="">
+section.chapter &gt; h1:before {
+&nbsp; content: counter(chapternumber) &quot;: &quot;;
+}
+</pre>
 
 <p>text</p>
 </section>
