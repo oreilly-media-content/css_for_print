@@ -84,7 +84,7 @@ section.chapter {
 <p>text</p>
 </section>
 
-<p>Once you have a counter created, you can dynamically insert the current counter value by referencing it in the <code>content</code> property of an HTML element, like this: <code>content: counter(<em>countername</em>);</code>. This will call whatever the value of the counter is at the moment that the element appears; for example,&nbsp;</p>
+<p>Once you have a counter created, you can dynamically insert the current counter value by referencing it in the <code>content</code> property of an HTML element, like this: <code>content: counter(<em>countername</em>);</code>. This will insert whatever the value of the counter is at the moment that the element appears; for example, if you're inserting the page counter, then the current page number will appear. If you're inserting the chapternumber counter that we created above, then the actual content that appears will be the number of the current chapter.</p>
 
 <pre data-original-title="" data-type="programlisting" title="">
 section.chapter &gt; h1:before {
