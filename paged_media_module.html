@@ -64,6 +64,8 @@
 
 <p>INSERT FIGURE: inside/outside edges and pseudoclasses</p>
 
+<p>The <code>:first</code> pseudo class applies to the first page of a an <code>@page</code> definition. This is great for formatting the first page of a section differently--for example, removing the page number from the first page of a chapter and adding some extra white space at the top of the page.</p>
+
 <pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 @page {
 &nbsp; border-bottom: 1pt solid cmyk(0%,0%,0%,100%);
@@ -84,8 +86,6 @@
 </pre>
 
 <p>As with all things CSS, the <code>@page</code> rule cascades. This means that you can define global page properties in a generic <code>@page</code> declaration, and then build on that with properties that are specific only to left, right, or another subset of pages.</p>
-
-<p>The <code>:first</code> pseudo class applies to the first page of a an <code>@page</code> definition. This is great for formatting the first page of a section differently--for example, removing the page number from the first page of a chapter and adding some extra white space at the top of the page.</p>
 
 <p>The other way to create more specified <code>@page</code> rules is by using page selectors.</p>
 
