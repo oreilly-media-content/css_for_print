@@ -72,6 +72,14 @@ body {
 <h2><code>page</code> and <code>pages</code></h2>
 
 <p>The CSS3 paged media module added two built-in counters: <code>page</code> and <code>pages</code>. The page counter increments by 1 with each new page of your document, unless you specify otherwise using the <code>counter-increment</code> property; <code>pages</code> then stores the value of the total number of pages in your document. Neither counter needs an initial <code>counter-reset</code> definition, however you can reset the <code>page</code> counter at any time, which will restart the page numbering at 1 (or whatever value you specify). This is useful for documents that have a preface or other introductory content, where you'd want to restart the page numbering at 1 with the first real chapter.</p>
+
+<p>You reset the page counter just as you would any other:</p>
+
+<p>section.chapter {</p>
+
+<p>&nbsp; counter-reset: page;</p>
+
+<p>}</p>
 </section>
 
 <p>text</p>
