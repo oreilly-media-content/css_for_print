@@ -60,7 +60,9 @@
 
 <p>First, there are a few pseudo classes built into the paged media spec that apply directly to <code>@page</code>. These pseudo classes limit the scope of the page rule to a predefined subset of pages: first, left, and right. As you'd expect, <code>:first</code> limits a definition only to the first page of a rule; and if you imagine that the bound book is lying open in front of you, the <code>:left</code> pseudo class applies only to left hand pages, and conversely <code>:right</code> applies to the right hand pages.</p>
 
-<p>For example, many books have different-sized margins for the outside and inside edges of the page. You'd use the margin property to set this, but the inside and outside edges of each page are different--for example, the inside edge of a righthand page is on the left, whereas on a lefthand page its the opposite. Instead of defining these margins for all your pages at once, you'd use pseudo classes to create this effect.</p>
+<p>For example, many books have different-sized margins for the outside and inside edges of the page. You'd use the margin property to set this, but the inside and outside edges of each page are different--for example, the inside edge of a righthand page is on the left and the outside edge is on the right, whereas on a lefthand page its the opposite. Instead of defining these margins for all your pages at once, you'd use pseudo classes to create this effect.</p>
+
+<p>INSERT FIGURE: inside/outside edgse and pseudoclasses</p>
 
 <pre data-code-language="css" data-original-title="" data-type="programlisting" title="">
 @page {
