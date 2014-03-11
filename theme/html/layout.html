@@ -14,6 +14,12 @@
         $( this ).toggleClass( "collapse" );
       });
     });
+
+    $( document ).ready(function() {
+      $( "#abouttheauthor" ).click(function() {
+        $( ".abouttheauthor" ).slideToggle();
+      });
+    });
     </script>
   </head>
 
@@ -30,7 +36,8 @@
           <li><a href="#" id="contents">Contents</a>
             {{ toc }}</li>
           <li><a href="#">Book (oreilly.com)</a></li>
-          <li><a href="#">About Nellie</a></li>
+          <li><a href="#" id="abouttheauthor">About Nellie</a>
+            <p class="abouttheauthor">Nellie is a real cool lady who does stuff and things. <a href="http://nelliemckesson.com">Website</a></p></li>
         </ul>
       </div>
     </div>
