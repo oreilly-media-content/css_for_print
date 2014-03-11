@@ -1,0 +1,50 @@
+{{ doctype }}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    {{ header }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="assets/javascripts/jquery.js"> </script>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <script>
+    $( document ).ready(function() {
+      $( "#contents" ).click(function() {
+        $( "nav" ).slideToggle();
+        $( this ).toggleClass( "collapse" );
+      });
+    });
+    </script>
+  </head>
+
+  <body data-type="book">
+
+<div class="container">
+
+  <div class="row">
+  <div class="span4">
+    <h1 class="title"><img src="assets/images/title.png" alt="CSS for the Printed Page" /></h1>
+
+    <div class="sidebar">
+      
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="contents">Contents</a>
+          {{ toc }}</li>
+        <li><a href="#">Book (oreilly.com)</a></li>
+        <li><a href="#">About Nellie</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="span8 leftborder">
+    {{ content }}
+</div>
+</div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2014 Elanor McKesson</p>
+</div>
+  </body>
+</html>

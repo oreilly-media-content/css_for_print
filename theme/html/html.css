@@ -1,0 +1,263 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.rightborder {
+  border-right: 6px solid #d8d8d8;
+  padding-right: 30px;
+}
+
+.leftborder {
+  border-left: 6px solid #f2f2f2;
+  padding-left: 30px;
+}
+
+h1.title {
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.2;
+}
+
+h1.title img {
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+nav {
+  display: none;
+}
+
+a#contents {
+  display: inline-block;
+}
+
+#contents:after {
+  content: " +";
+}
+
+a#contents.collapse:after {
+  content: " -";
+}
+
+section[data-type="chapter"] > h1 {
+  font-size: 2.5em;
+  color: #2FAA96;
+  margin-top: 10px;
+  border-bottom: 2px solid #2FAA96;
+}
+
+div.sidebar {
+
+}
+
+div.sidebar ul {
+  text-align: center;
+  padding-left: 0;
+  border-top: 2px solid #2FAA96;
+  border-bottom: 2px solid #2FAA96;
+}
+
+div.sidebar ul li {
+  color: #d8d8d8;
+  list-style-type: none;
+  padding: 6px 0 6px 10px;
+  overflow: visible;
+}
+
+div.sidebar a {
+  color: #d8d8d8;
+  text-decoration: none;
+}
+
+div.sidebar a:hover {
+  color: #F54D70;
+}
+
+div.sidebar li nav {
+  text-align: left;
+  border-top: 1px dotted #2FAA96;
+  border-bottom: 1px dotted #2FAA96;
+}
+
+div.sidebar li nav ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.sidebar li nav li {
+  border-bottom-width: 0px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.container p, div.container li {
+  line-height: 140%;
+  color: #333;
+}
+
+div.footer {
+  color: #d8d8d8;
+  font-size: 0.8em;
+  padding-left: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ------------------------ GRID */
+
+.row {
+  margin-left: -20px;
+  *zoom: 1; }
+  .row:before, .row:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .row:after {
+    clear: both; }
+
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px; }
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px; }
+
+.span12 {
+  width: 940px; }
+
+.span11 {
+  width: 860px; }
+
+.span10 {
+  width: 780px; }
+
+.span9 {
+  width: 700px; }
+
+.span8 {
+  width: 620px; }
+
+.span7 {
+  width: 540px; }
+
+.span6 {
+  width: 460px; }
+
+.span5 {
+  width: 380px; }
+
+.span4 {
+  width: 300px; }
+
+.span3 {
+  width: 220px; }
+
+.span2 {
+  width: 140px; }
+
+.span1 {
+  width: 60px; }
+
+.offset12 {
+  margin-left: 980px; }
+
+.offset11 {
+  margin-left: 900px; }
+
+.offset10 {
+  margin-left: 820px; }
+
+.offset9 {
+  margin-left: 740px; }
+
+.offset8 {
+  margin-left: 660px; }
+
+.offset7 {
+  margin-left: 580px; }
+
+.offset6 {
+  margin-left: 500px; }
+
+.offset5 {
+  margin-left: 420px; }
+
+.offset4 {
+  margin-left: 340px; }
+
+.offset3 {
+  margin-left: 260px; }
+
+.offset2 {
+  margin-left: 180px; }
+
+.offset1 {
+  margin-left: 100px; }
+
+[class*="span"].hide,
+.row-fluid [class*="span"].hide {
+  display: none; }
+
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right; }
+
+/* Container
+----------------------------------------------------- */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1; }
+  .container:before, .container:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .container:after {
+    clear: both; }
+
+.container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1; }
+  .container-fluid:before, .container-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .container-fluid:after {
+    clear: both; }
+
+.navbar {
+  background-color: #ac2f3c;
+  color: white;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased; }
+
+.navbar:after {
+  clear: both; }
+
+.navbar a {
+  color: #FFF;
+  text-decoration: none; }
+
+.navbar-inner:before,
+.navbar-inner:after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.navbar-inner:after {
+  clear: both; }
