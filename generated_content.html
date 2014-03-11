@@ -120,7 +120,11 @@ section.chapter &gt; h1:before {
 
 <p>To set a string, use the string-set property, like this: <code>string-set: <em>stringname</em> <em>content</em>;</code>, where <em><code>content</code></em> is an optional value telling your renderer what parts of the element to include in the string. By default, the string will include only the actual text of the element, but you can also include any additional text you've added with the :before and :after pseudo classes--for example, if you added chapter numbers to each chapter title using the :before pseudo class, you can include those as part of the saved string.</p>
 
+<div data-type="warning">
+<h1>Warning</h1>
+
 <p>A saved string will by default include the entirety of an element's text--including the full text of any children within the element. This means if you save a <code>ul</code> as a string, all of the <code>li</code> elements within that <code>ul</code> will also be saved within the string, as one long block of text, and the same goes for any element that has children.</p>
+</div>
 
 <p>See recipe: creating a table of contents</p>
 
