@@ -98,6 +98,10 @@ div.sidebar li nav li {
   padding-left: 0;
 }
 
+div.sidebar li nav li a {
+  color: #2FAA96;
+}
+
 div.container p, div.container li {
   line-height: 140%;
   color: #333;
