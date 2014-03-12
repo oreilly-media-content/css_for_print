@@ -11,7 +11,7 @@ body {
 }
 
 .rightborder {
-  border-right: 6px solid #d8d8d8;
+  border-right: 6px solid #f2f2f2;
   padding-right: 30px;
 }
 
@@ -51,6 +51,7 @@ section[data-type="chapter"] > h1 {
   font-size: 2.5em;
   color: #2FAA96;
   margin-top: 10px;
+  padding-bottom: 3px;
   border-bottom: 2px solid #2FAA96;
 }
 
@@ -93,6 +94,7 @@ div.sidebar li nav ul {
 }
 
 div.sidebar li nav li {
+  color: #000;
   border-bottom-width: 0px;
   margin-left: 0;
   padding-left: 0;
@@ -100,6 +102,11 @@ div.sidebar li nav li {
 
 div.sidebar li nav li a {
   color: #2FAA96;
+}
+
+div.sidebar p.abouttheauthor {
+  text-align: left;
+  display: none;
 }
 
 div.container p, div.container li {
@@ -304,7 +311,7 @@ aside[data-type="footnotes"] p[data-type="footnote"] {
 .navbar-inner:after {
   clear: both; }
 
-/* responsive */
+/* Size-specific styles */
 
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -323,10 +330,7 @@ aside[data-type="footnotes"] p[data-type="footnote"] {
     min-height: 1px;
     margin-left: 20px; }
 
-  .container,
-  .navbar-static-top .container,
-  .navbar-fixed-top .container,
-  .navbar-fixed-bottom .container {
+  .container {
     width: 724px; }
 
   .span12 {
@@ -405,31 +409,23 @@ aside[data-type="footnotes"] p[data-type="footnote"] {
 @media (max-width: 767px) {
 
   .leftborder, .rightborder {
-  border-left-width: 0px;
-  border-right-width: 0px;
-  padding-left: 0;
-  padding-right: 0;
-}
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-  .container, .container-fluid {
+  .container {
     padding-left: 20px;
     padding-right: 20px; }
-
-  .container-fluid {
-    padding: 0; }
 
   .container {
     width: auto; }
 
-  .row-fluid {
-    width: 100%; }
-
   .row {
     margin-left: 0; }
 
-  [class*="span"],
-  .uneditable-input[class*="span"],
-  .row-fluid [class*="span"] {
+  [class*="span"] {
     float: none;
     display: block;
     width: 100%;
@@ -438,13 +434,34 @@ aside[data-type="footnotes"] p[data-type="footnote"] {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-  .span12,
-  .row-fluid .span12 {
+  .span12 {
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-  .row-fluid [class*="offset"]:first-child {
-    margin-left: 0; }
+}
+
+@media print {
+  h1.title img {
+    max-width: 2in;
+  }
+
+  h1.title:after {
+    content: "by Nellie McKesson. Check out the book published by O'Reilly Media: oreilly.com/TK.";
+    display: block;
+    color: #000;
+    padding-bottom: 0.25in;
+    border-bottom: 1pt dotted #000;
+    margin-bottom: 0.5in;
+  }
+
+  div.sidebar {
+    display: none;
+  }
+
+  section[data-type="chapter"] > h1 {
+    border-bottom-width: 0px;
+    color: #000;
+  }
 }
