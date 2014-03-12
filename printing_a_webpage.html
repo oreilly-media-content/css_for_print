@@ -79,7 +79,7 @@ h1 {
 
 <p>Fortunately, in the majority of cases, there's likely much less variation in page size for printed output than in digital devices, though it's best not to make any assumptions. If you've already got responsive media queries in place for different page sizes, build on top of those for your print CSS as well, letting the content reflow based on page size, and then optimizing further for print output. Make use of the cascade, to prevent yourself from repeating code.&nbsp;</p>
 
-<p>For example, you can use media queries limited only to device widths, but not to the actual media display (i.e., no restriction based on screen or print), and then fine tune your print styles based on those size-specific styles.</p>
+<p>For example, you can use media queries limited only to device widths, but not to the actual media display (i.e., no restriction based on screen or print); your print styles will automatically pick up whichever size-based styles are appropriate, and then you can fine tune your print styles starting from that responsive base.</p>
 
 <pre data-original-title="" data-type="programlisting" title="">
 /* Global styles, not contained in a media query */
