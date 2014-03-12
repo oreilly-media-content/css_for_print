@@ -3,10 +3,8 @@
   "files": [
     "preface.html",
     "introduction_to_print.html",
-    "print_vs_web.html",
     "basic_print_layout.html",
     "printing_a_webpage.html",
-    "css_typography.html",
     "paged_media_module.html",
     "generated_content.html",
     "professional_css.html",
